@@ -6,6 +6,7 @@ public class AnimalSpawner : MonoBehaviour
 {
     public GameObject cowprefabs;
     [SerializeField] private float time;
+    [SerializeField] private int max = 1;
     private List<GameObject> cows = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,10 @@ public class AnimalSpawner : MonoBehaviour
     IEnumerator SpawnCows()
     {
         yield return new WaitForSeconds(time);
-        SpawnCow();
+        if(cows.Count < max)
+        {
+            SpawnCow();
+        }
     }
     void SpawnCow()
     {
