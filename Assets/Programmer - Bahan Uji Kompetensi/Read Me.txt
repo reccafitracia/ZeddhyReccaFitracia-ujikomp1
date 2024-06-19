@@ -1,0 +1,5 @@
+=====================
+	NOTES
+=====================
+
+Sudah saya sediakan assets dalam bentuk .zip dan .unitypackage silakan import salah satu saja.
